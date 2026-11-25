@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ashwini – Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#70b836; --surface:#E4EBDF; --ink:#395a48; --muted:#4D6455; --green:#2F6B4A; --accent:#E9A820; --on-accent:#14261C; --line:#CBD6C5;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0e0f0f;--surface:#18271E;--ink:#E8F0E4;--muted:#A3B8A9;--green:#6FBF8F;--accent:#F0B83A;--on-accent:#14261C;--line:#2A3D31;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#101A14;--surface:#18271E;--ink:#E8F0E4;--muted:#A3B8A9;--green:#6FBF8F;--accent:#F0B83A;--on-accent:#14261C;--line:#2A3D31;color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.65}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:68rem;margin:0 auto;padding:0 1.0rem}
+h1,h2,h3{font-family:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+
+nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0}
+nav .logo{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;font-size:1.25rem;text-decoration:none}
+nav ul{display:flex;gap:1.5rem;list-style:none;margin:0;padding:0}
+nav ul a{text-decoration:none;color:var(--muted);font-weight:500}
+nav ul a:hover{color:var(--ink)}
+
+.hero{position:relative;padding:5rem 0 6rem;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:0;
+  background:repeating-linear-gradient(172deg,transparent 0 46px,var(--line) 46px 48px);opacity:.7;
+  -webkit-mask-image:linear-gradient(to bottom,#000,transparent 90%);mask-image:linear-gradient(to bottom,#000,transparent 90%)}
+.hero .wrap{position:relative;z-index:1}
+.hero p.hi{color:var(--green);font-weight:500;margin:0 0 1rem}
+.hero h1{font-size:clamp(0.5rem,13vw,3rem);font-weight:520}
+.hero h2{font-size:clamp(0.4rem,2.5vw,2.0rem);font-weight:400;color:var(--muted);margin-top:1.25rem;max-width:30ch;line-height:1.2}
+.cta{display:flex;flex-wrap:wrap;gap:.9rem;margin-top:2.25rem}
+.btn{display:inline-block;padding:.6rem 1.5rem;border-radius:.5rem;font-weight:500;text-decoration:none;border:2px solid var(--ink)}
+.btn.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+.btn{transition:transform .15s}
+
+section{padding:4.5rem 0;border-top:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(2rem,5vw,3rem);margin-bottom:2.5rem}
+
+.about{display:grid;gap:2rem;grid-template-columns:1fr}
+.about p{margin:0 0 1rem;max-width:62ch}
+.skills{display:flex;flex-wrap:wrap;gap:.6rem;list-style:none;margin:0;padding:0;align-content:flex-start}
+.skills li{background:var(--surface);border:1px solid var(--line);padding:.45rem 1rem;border-radius:999px;font-weight:500}
+@media(min-width:48rem){.about{grid-template-columns:1.3fr 1fr;gap:4rem}}
+
+.projects{display:grid;gap:1.5rem}
+.project{display:grid;gap:.75rem;padding:1.75rem;background:var(--surface);border-left:6px solid var(--green);border-radius:.25rem .75rem .75rem .25rem}
+.project:nth-child(2){border-left-color:var(--accent)}
+.project h3{font-size:1.5rem}
+.project p{margin:0;color:var(--muted);max-width:60ch}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:.25rem 0 0;padding:0}
+.tags li{font-size:.4rem;color:var(--green);font-weight:500;border-bottom:2px solid var(--line)}
+@media(min-width:56rem){.projects{grid-template-columns:repeat(3,1fr)}}
+
+.contact p{max-width:52ch;margin:0 0 1.75rem}
+.contact .big{display:block;font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;font-size:clamp(1.3rem,4.2vw,2.4rem);text-decoration:none;word-break:break-all;margin-bottom:.5rem}
+.contact .big:hover{color:var(--green)}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav arial-label="Main">
+    <a class="logo" href="#top">Ashwini</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <p class="hi">Hi, I’m</p>
+      <h1>Ashwini</h1>
+      <h2>I build responsive, user friendly web applications and enjoy turning ideas into functional and digital experiences.</h2>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See my projects</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>About me</h2>
+      <div class="about">
+        <div>
+          <p>I’m a software developer who enjoys turning everyday tasks into simple, usable apps. I work with HTML, CSS, JavaScript and React to build interfaces that are clear and quick to use.</p>
+          <p>I keep my work organised with Git and GitHub, and I write code in VS Code. I’m looking for opportunities to keep building and learning on a real team.</p>
+        </div>
+        <ul class="skills" aria-label="Skills">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Git</li><li>GitHub</li><li>VS Code</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2>Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Expense Tracker</h3>
+          <p>Record what you spend, see where your money goes, and stay on top of your budget.</p>
+          <ul class="tags"><li>React</li><li>JavaScript</li><li>CSS</li></ul>
+        </article>
+        <article class="project">
+          <h3>Food Ordering App</h3>
+          <p>Browse a menu, add dishes to a cart and place an order in a few taps.</p>
+          <ul class="tags"><li>React</li><li>JavaScript</li><li>CSS</li></ul>
+        </article>
+        <article class="project">
+          <h3>Farm Management App</h3>
+          <p>Keep track of crops, fields and farm activities in one place.</p>
+          <ul class="tags"><li>React</li><li>JavaScript</li><li>CSS</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let’s work together</h2>
+      <p>Have a project or an opening in mind? Send me an email or give me a call.</p>
+      <a class="big" href="mailto:ashwiniagri2023@gmail.com">ashwiniagri2023@gmail.com</a>
+      <a class="big" href="tel:+919159713957">+91 91597 13957</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Ashwini. Built with HTML and CSS.</div>
+</footer>
+</body>
+</html>
